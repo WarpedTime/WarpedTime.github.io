@@ -137,6 +137,7 @@ function init(){
                 }
                 
                 li.style.width= 300 +"px";
+                //li.style.height= 300 +"px";
                 li.style.height= "auto";
                 li.appendChild(cap);
                 li.appendChild(img);

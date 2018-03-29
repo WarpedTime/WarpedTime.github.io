@@ -6,14 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
     <script src="mainJs.js"></script>
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-  
-    <!--smooth scrolling-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
     <script>
         "use strict";
-        var projectImages = ["media/shatteredDreams.jpg","media/text.png","media/flocking.png","media/chess.jpg","media/ed.jpg","media/dragonWater.jpg"];  
-        var galCaptions = [1,2,3,4,5,6];
-        var links = ["shattered.html","code.html","unity.html","3d.html","3d.html","art.html"];  
-
+        var projectImages = ["media/shatteredDreams.jpg","media/shatteredSC2.png", 'media/shatteredUI.png',"media/designDoc.png","media/betaScreen.png", 'media/betarangers_art.png', 'media/floatingCity.png', 'media/earthResource.png','media/city.png','media/waterResource.png','media/airResource.png','media/dragonWater.jpg', 'media/banner.png','media/17.png', 'media/lvl.png', 'media/lvl (done).png', 'media/JJ_lvl.jpg','media/JJ_lvl-flow.jpg', 'media/ziggurat.png','media/sketch.png','media/sketch2.JPG','media/raikou.JPG','media/glass-archer.png','media/glass-mage.png','media/glass-ninja.png','media/glass-warrior.png','media/ed.jpg', 'media/chess.jpg' ];  
+        var galCaptions = ['Project: Shattered Dreams','Shatered Dreams Screenshot', 'Shattered Dreams UI','Project: BetaRangers', 'BetaRangers Screenshot','BetaRangers Skills','Gibraltar Concept: air-city', 'Gibraltar Concept: resource', 'Gibraltar Concept: city', 'Gibraltar Concept: water-resource','Gibraltar Concept: air-resource','Dragons: Watercolor & Pencil', 'Emblem: Digital/Pen', 'Sea-Creature: Digital/Pen', 'Level Design: Kirby Sketch','Kirby Level Final', 'Level Design: Jazz Jackrabbit', 'JJ flow sketch','Ur-Ziggurat Model','Chimera Sketch: Pencil','Dragon Sketch: Pencil','Raikou Sketch: Pencil', 'Shattered Dreams: Archer Concept','Shattered Dreams: Mage Concept','Shattered Dreams: Ninja Concept','Shattered Dreams: Warrior Sketch','3D Model: Lego Ed','3D Model: Splatoon/Zelda Chess'];
+      
         window.onload = init;
     </script> 
     
@@ -22,7 +22,23 @@
 </head>
 
 <body>
-    
+
+  <!--arrows for lightbox-->
+<div id="arrows" style="display:none">
+    <img id="lightboxLeft" class="arrows" style="z-index: 2" src="media/left.png" alt="image">
+    <img id="lightboxRight" class="arrows"  style="z-index: 2" src="media/right.png" alt="image">
+</div>
+
+<!--the lighbox for the gallery-->
+<div id="Lightbox" class="lightbox" style="display:none">
+    <ul>
+        <li>
+            <img id="lightboxImage" src="" alt="image">
+            <p id="lightboxCaption"></p>
+        </li>
+    </ul>
+</div>
+  
 <section id="main">
     
     <!--page header for the site-->
@@ -38,6 +54,7 @@
 	   			<li ><a href="#about">About</a></li>
 	   			<li ><a href="#work" >Work</a></li>
 	   			<li ><a href="#contact">Contact</a></li>
+	   			<li ><a href="files/CarmiDanielle_resume.pdf"> Resume</a></li>
 	   		</ul>
         </section>
     </header>
@@ -52,7 +69,7 @@
         <div class="left center">
             <br>
             <h2>I am a creator.</h2>
-            <p> I have a passion for designing and creating content for video games and other forms of interactive or digital media.</p>
+            <p> I have a passion for designing and creating content for web, video games, and other forms of interactive or digital media.</p>
         </div>
         <p class="clear"></p>
     </div></section>
@@ -67,8 +84,8 @@
         <h2>About Me:</h2>
         <p>I use various different mediums to create my work.</p>
             <ul>
-                <li>Languages: C#, C++, js, html/css, processing</li>
-                <li>Programs: Maya, Blender, Visual Studio, Unity, Photoshop, Illustrator, Paint-Tool SAI, Processing, MonoGame</li>
+                <li>Languages: C#, C++, JavaScript, html/css</li>
+                <li>Programs: Unity, Maya, Blender, Visual Studio, Photoshop, Illustrator, Paint-Tool SAI, Processing, MonoGame</li>
                 <li>Physical medium: pen/pencil drawings, acryllic, watercolor, sculpting</li>
             </ul>
         </div>
@@ -80,11 +97,11 @@
     <section id="work" class="green">
         <div class="container center">
             <h2>My Work</h2>
-            <p> - the stuff i have done - </p>
+            <p> * Under Construction (more to be added) * </p>
         </div>
         
         <!--generate project gallery-->
-        <div id="Gallery" class="center grid projects"></div>
+        <div id="Gallery" class="center grid gallery"></div>
         
         <div class="container center">
             <p><a href="#main" class="center">back to top.</a></p>
@@ -95,6 +112,7 @@
     <section id="contact" class="pink"><div class="container">
         <h2>How to contact me</h2>
         <p>~ dsc7355 [at] rit.edu ~</p>
+      <p> LinkedIn: <a style="color: blue" href="http://www.linkedin.com/in/danielle-carmi/">linkedin.com/in/danielle-carmi/</a> </p>
     </div></section>
     
     
@@ -102,10 +120,8 @@
     <div id="dividerBottom" class="pink"></div>
     <footer>
         <div class="container">
-            <a href="notes.html" class="rightside">Notes</a>
 
-            <p class="center">- &copy; Danielle Carmi -</p>
-            <a href="auth/protected.html">Secret</a>
+            <p class="center">- 2018 &copy; Danielle Carmi -</p>
             <p class="clear"></p>
     </div></footer>
 
