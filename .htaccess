@@ -1,0 +1,2 @@
+ErrorDocument 404 /dsc7355/230/portfolio/error.html
+DirectoryIndex index.html
